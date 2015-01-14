@@ -13,4 +13,4 @@ VOLUME /data
 EXPOSE 25565
 
 WORKDIR /data
-CMD ["java", "-Xms512M", "-Xmx1536M", "-XX:MaxPermSize=128M", "-jar", "/minecraft/spigot-1.8.jar"]
+CMD ["java", "-Xms512M", "-Xmx1536M", "-XX:MaxPermSize=128M", "-jar", "/minecraft/spigot-1.8.jar", "--noconsole"]
