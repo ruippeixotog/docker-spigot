@@ -1,4 +1,4 @@
-FROM dockerfile/java:oracle-java7
+FROM java:7
 
 RUN git config --global user.email "spigot@example.com"
 RUN git config --global user.name "spigot"
