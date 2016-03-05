@@ -1,11 +1,13 @@
 FROM java:7
 
+ENV SPIGOT_REV 1.8.3
+
 RUN git config --global user.email "spigot@example.com"
 RUN git config --global user.name "spigot"
 
 WORKDIR /minecraft
 RUN wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar && \
-  java -jar BuildTools.jar && \
+  java -jar BuildTools.jar --rev $SPIGOT_REV && \
   rm -rf /root/.m2 && \
   find * -maxdepth 0 ! -name '*.jar' -exec rm -rf {} \; && \
   mv spigot-*.jar spigot.jar && \
