@@ -1,6 +1,6 @@
 FROM java:7
 
-ENV SPIGOT_REV 1.8.3
+ENV SPIGOT_REV 1.9
 
 RUN git config --global user.email "spigot@example.com"
 RUN git config --global user.name "spigot"
