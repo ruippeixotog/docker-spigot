@@ -1,6 +1,6 @@
 FROM openjdk:8
 
-ARG SPIGOT_REV=latest
+ENV SPIGOT_REV=1.10.2
 
 RUN git config --global user.email "spigot@example.com"
 RUN git config --global user.name "spigot"
