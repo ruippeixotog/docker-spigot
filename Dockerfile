@@ -1,7 +1,8 @@
-FROM openjdk:8
+FROM openjdk:16-jdk-alpine
 
 ARG SPIGOT_REV=latest
 
+RUN apk add git
 RUN git config --global user.email "spigot@example.com"
 RUN git config --global user.name "spigot"
 
@@ -18,4 +19,4 @@ VOLUME /data
 EXPOSE 25565
 
 WORKDIR /data
-CMD ["java", "-Xms512M", "-Xmx1536M", "-XX:+UseConcMarkSweepGC", "-jar", "/minecraft/spigot.jar", "--noconsole"]
+CMD ["java", "-Xms512M", "-Xmx1536M", "-jar", "/minecraft/spigot.jar", "--noconsole"]
